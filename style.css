@@ -1,0 +1,113 @@
+*{
+	padding: 0;
+	margin: 0px;
+	box-sizing: border-box;
+}
+body{
+	/* background: #175282; */
+}
+.header{
+	margin-left: 50px;
+	margin-top: 10px;
+}
+.header .buttons{
+	margin-top: 0px;
+	padding: 10px;
+}
+
+.header .buttons button{
+	padding: 13px;
+    background: rebeccapurple;
+	border: none;
+	border-color: none;
+    color: #f7e50f;
+    border-bottom-right-radius: 8px;
+    border-top-left-radius: 8px;
+	box-shadow: -3px 2px 2px 0px #8920b56b;
+	font-weight: bold;
+}
+.header .buttons  button:active{
+	color: #0fd7f7;
+}
+.header h3{
+	color: #fafafd;
+    background: linear-gradient(#663399fc,#ffff0000);
+    padding: 30px;
+    font-family: monospace;
+    display: inline-block;
+    padding-left: 76px;
+    padding-right: 76px;
+}
+
+
+
+.blue-eyes .eye-color{
+	fill: #175282;
+}
+.sad .mouth {
+	transform: rotate(180deg) scale(.5);
+	transform-origin: 340px 390px;
+}
+@keyframes moveEyes {
+	20%{
+		transform: translate(-18px, -20px);
+	}
+	40%{
+		transform: translate(0px, 0px);
+	}
+	65%{
+		transform: translate(18px, 0px);
+	}
+	
+}
+.move-around .inner-eye-group{
+	animation: moveEyes 5s infinite;
+}
+/* Animating the whiskers of the cat */
+@keyframes leftWhiskers {
+	20%{
+		transform: rotate(5deg);
+	}
+	60%{
+		transform: rotate(-5deg);
+	}
+}
+.move-around .left-whiskers{
+	animation: leftWhiskers 3s infinite;
+	transform-origin: 325px 350px;
+}
+
+@keyframes rightWhiskers {
+	5%{
+		transform: rotate(-2deg);
+	}
+	90%{
+		transform: rotate(7deg);
+	}
+}
+.move-around .right-whiskers{
+	animation: rightWhiskers 3s infinite;
+	transform-origin: 325px 350px;
+}
+
+/* Moving the cat head */
+@keyframes move{
+	20%{
+		transform: rotateY(10deg) rotateX(10deg);
+	}
+	40%{
+		transform: rotateY(25deg) rotateX(10deg);
+	}
+	60%{
+		transform: rotateY(-10deg) rotateX(-10deg);
+	}
+	85%{
+		transform: rotateY(-10deg) rotateX(-16deg);
+	}
+}
+.move-around {
+	animation: move 8s infinite;
+}
+.svg-container{
+	perspective: 1000px;
+}
